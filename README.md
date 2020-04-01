@@ -23,3 +23,23 @@ Things you may want to cover:
 
 * ...
 ＃goodview
+
+
+* rails server
+
+
+* ▼新しく作るとき
+
+* rails generate model 作るもの title:text author:text price:integer publisher:text memo:text
+
+↓マイグレーションで更新する
+
+* rails db:migrate
+
+↓viewに　index show add edit　の４つの.erbを作る。
+
+* rails generate controller 作る名前 index show add edit
+
+
+ networkでどう通っているか確認
+
