@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/common.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <title>ホームページ制作会社　GoodView</title>
+  </head>
+  <body>
+	<nav class="top_nav">
+		<%= image_tag 'top/logo.png' %>
+   </nav>
+    <div id="main">
+		<main role="main">
+			<div class="mvChild">
+				<div class="mvChildIn">
+					<p class="mvChildTitEn">CONTACT</p>
+					<h1 class="mvChildTitJa">お問合せ&#038;お見積もり依頼</h1>
+				</div>
+		    </div>
+				<!-- /.mvChild -->	
+			<div class="breadcrumbWrap">
+			</div>
+			<!-- /#breadcrumb -->
+		　<section class="contact" id="Contact">
+          <div class="contactIn wrapper">
+            <div role="form" class="wpcf7" id="wpcf7-f4-p52-o1" lang="ja" dir="ltr">
+            <div class="screen-reader-response"></div>
+            <% if @forms.errors.any? %>
+              <ul>
+                <% @forms.errors.messages.each do |key, vals| %>
+                  <% vals.each do |val| %>
+                    <li><%= val %></li>
+                  <% end %>
+                <% end %>
+              </ul>
+            <% end %>
+            <%= form_tag(controller: "forms", action: "index") do %>
+              <div class="form-group">
+                <label for="name">名前</label>
+                <%= text_field_tag("name","",{class:"form-control"}) %>
+              </div>
+              <div class="form-group">
+                <label for="name">メール</label>
+                <%= text_field_tag("mail","",{class:"form-control"}) %>
+              </div>
+              <div class="form-group">
+                <label for="name">ご依頼内容</label>
+                <%= text_area_tag("content","",{class:"form-control"}) %>
+              </div>
+              <%= submit_tag("送信する", {class:"btn btn-primary"}) %>
+            <% end %>
+          </div>
+          </div>
+        </section>
+        <!-- /.quality -->
+      </main>
+    </div>
+    <footer>
+
+    </footer>
+  </body>
+</html>

@@ -19,7 +19,7 @@
             // 移動先を取得
             var target = $(href == "#" || href == "" ? 'html' : href);
             // 移動先を数値で取得
-            var position = target.offset().top - 320;
+            var position = target.offset().top - 120;
             // スムーススクロール
             $('body,html').animate({scrollTop:position}, speed, 'swing');
             return false;
@@ -72,37 +72,36 @@
   </head>
   <body>
       <nav class="top_nav">
-          <%= image_tag 'top/logo.png' %>
+          <%= image_tag 'top/logo.svg' %>
           <ul>
-            <li>コンセプト</li>
-            <li>制作例</li>
-            <li>料金プラン</li>
-            <li>プロフィール</li>
-            <li>ご利用の流れ</li>
-            <li>QA</li>
-            <li>お問い合わせ</li>
+            <li><%= link_to "コンセプト", "#1" %></li>
+            <li><%= link_to "制作例", "#2" %></li>
+            <li><%= link_to "料金プラン", "#3" %></li>
+            <li><%= link_to "プロフィール", "#4" %></li>
+            <li><%= link_to "QA", "#5" %></li>
+            <li><%= link_to "お問い合わせ", "/forms" %></li>
           </ul>
     </nav>
     <div class="kv_wrap">
         <h1>人を集めるサイトを作る。</h1>
         <div class="kv">
             <p class="cv_button_text">まずはお気軽にご相談ください！</p>
-            <p class="cv_button"><%= link_to "サイト制作を依頼する", "form" %></p>
-            <p class="cv_button_sp"><%= link_to "サイト制作を依頼する", "form" %></p>
+            <p class="cv_button"><%= link_to "サイト制作を依頼する", "forms" %></p>
+            <p class="cv_button_sp"><%= link_to "サイト制作を依頼する", "forms" %></p>
         </div>
     </div>
     <div class="page-high">
-      <p  class="page-high_3000px" id="sec1">△▲3000px from above</p>
-      <p  class="page-high_3500px" id="sec2">△▲3500p from abovex</p>
-      <p  class="page-high_4000px" id="sec3">△▲4000px from above</p>
-      <p  class="page-high_4500px" id="sec4">△▲4500px from above</p>
+      <p  class="page-high_3000px" id="sec1">△▲3000px </p>
+      <p  class="page-high_3500px" id="sec2">△▲3500px </p>
+      <p  class="page-high_4000px" id="sec3">△▲4000px </p>
+      <p  class="page-high_4500px" id="sec4">△▲4500px </p>
     </div>
     <div>
        <section class="topic_wrap">
           <div class="topic_left-and-right">
-            <p class="topic_left"><%= image_tag 'top/woman_and_man.png' %></p>
+            <p class="topic_left"><%= image_tag 'top/woman_and_man.svg' %></p>
             <div class="topic_right">
-                <h2>WEBサイトを自慢したい！</h2>
+                <h2 id="1">WEBサイトを自慢したい！</h2>
                 <p class="topic_text">お客様の人生がWEBサイトを通して豊かに<br>なるようなデザインをご提供いたします。</p>
             </div>
           </div>
@@ -111,13 +110,13 @@
                 <h2>WEBサイトを自慢したい！</h2>
                 <p class="topic_text">お客様の人生がWEBサイトを通して豊かに<br>なるようなデザインをご提供いたします。</p>
             </div>
-            <p class="topic_bottom"><%= image_tag 'top/woman_and_man.png' %></p>
+            <p class="topic_bottom"><%= image_tag 'top/woman_and_man.svg' %></p>
           </div>
         </section>
         <section class="topic_wrap good-job">
             <div class="topic_center">
-                <h2>「いいサイト」をとことん追求する。<br>それが<span><%= image_tag 'top/logo.png' %></span>の物作りです。</h2>
-                <p class="topic_text">新規のお客様が<br>
+                <h2>「いいサイト」をとことん追求する。<br>それが<span><%= image_tag 'top/logo.svg' %></span>の物作りです。</h2>
+                <p class="topic_text">HPに来たお客様が<br>
                 「どんな雰囲気のお店だろう？」「どんな商品だろう？」<br>
                 「写真を見たけれど詳しく知りたい」<br>
                 濃い情報をすぐに見つけられるサイトが「いいサイト」です。<br>
@@ -127,7 +126,7 @@
         </section>
         <section class="topic_wrap">
             <div class="topic_center">
-                <h2>制作例</h2>
+                <h2 id="2">制作例</h2>
                 <ul>
                     <li></li>
                     <li></li>
@@ -147,12 +146,12 @@
                         ※難しいムービーをつける場合は、オプション費用になる場合もございます。
                     </p>
                 </div>
-                <p class="topic_right"><%= image_tag 'top/pc_image.png' %></p>
+                <p class="topic_right"><%= image_tag 'top/pc_image.svg' %></p>
             </div>
         </section>
         <section class="topic_wrap">
             <div class="topic_center">
-                <h2>料金プラン</h2>
+                <h2 id="3">料金プラン</h2>
                 <h3>基本料金（パソコン・スマホのレスポンシブ対応）</h3>
                     <div class="table_wrap">
                         <table>
@@ -254,22 +253,22 @@
         </section>
         <div class="topic_wrap button_wrap">
             <div class="button_background">
-                <p class="button"><a href="contact/index.html">サイト制作を<span>相談・</span>依頼する  ＞</a></p>
+                <p class="button"><%= link_to "サイト制作を相談・依頼する >", "forms" %></p>
             </div>
         </div>
         <section class="topic_wrap">
             <div class="topic_center">
-              <h2>クリエイター</h2>
+              <h2  id="4">クリエイター</h2>
     　　　　　　　<div class="topic_left-and-right" >
-                    <p class="topic_left"><img src="image/pc_image.png" alt="pc_image"></p>
+                    <p class="topic_left"><%= image_tag 'top/profile.png' %></p>
                     <p class="topic_right topic_text">
-                            <span>Kayo Nakamura</span><br>
-                            大手WEB広告代理店、WEB制作会社、<br>
-                            自社商品WEB販売企画出身。WEBデザイナー、<br>
-                            WEBディレクター、エンジニアの経歴を持つ。<br>
-                            商品が売れるためのWEB企画から、WEBサイトの<br>
-                            品質管理までサポートのご依頼も承ります。<br>
-                            Googleアナリティクス・オプティマイズを使用した<br>
+                            <span class="1">Kayo Nakamura</span><br>
+                            <span class="2">大手WEB広告代理店、WEB制作会社、</span><br>
+                            <span class="3">自社商品WEB販売企画出身。WEBデザイナー、</span><br>
+                            <span class="4">WEBディレクター、エンジニアの経歴を持つ。</span><br>
+                            <span class="5">商品が売れるためのWEB企画から、WEBサイトの</span><br>
+                            <span class="6">品質管理までサポートのご依頼も承ります。</span><br>
+                            <span class="7">Googleアナリティクス・オプティマイズを使用した</span><br>
                             WEBCVRなどを算出するWEB数値解析も可能です。
                     </p>
                 </div>
@@ -277,11 +276,11 @@
         </section>
         <section class="topic_wrap push">
             <div class="topic_center">
-                <h2 class="none">こんなお客様に、<br>個人クリエイター依頼<span><%= image_tag 'top/logo.png' %></span>がおすすめ！</h2>
-                <h2 class="show">こんなお客様に、<br>個人クリエイター依頼<br><span><%= image_tag 'top/logo.png' %></span>がおすすめ！</h2>
+                <h2 class="none">こんなお客様に、<br>個人クリエイター依頼<span><%= image_tag 'top/logo.svg' %></span>がおすすめ！</h2>
+                <h2 class="show">こんなお客様に、<br>個人クリエイター依頼<br><span><%= image_tag 'top/logo.svg' %></span>がおすすめ！</h2>
                 <ul>
                     <li class="">
-                        <p><%= image_tag 'top/osusume01.png' %></p>
+                        <p><%= image_tag 'top/osusume01.svg' %></p>
                         <p class="topic_text push_text">
                             お引き渡し後の<br>
                             NEWSページ更新・<br>
@@ -290,7 +289,7 @@
                         </p>
                     </li>
                     <li>
-                        <p><%= image_tag 'top/osusume02.png' %></p>
+                        <p><%= image_tag 'top/osusume02.svg' %></p>
                         <p class="topic_text push_text">
                             長くWEBサイトの<br>
                             運営をしたいので、<br>
@@ -299,7 +298,7 @@
                         </p>
                     </li>
                     <li>
-                        <p><%= image_tag 'top/osusume03.png' %></p>
+                        <p><%= image_tag 'top/osusume03.svg' %></p>
                         <p class="topic_text push_text">
                             時間を使って<br>
                             じっくりとWEBサイトを<br>
@@ -307,7 +306,7 @@
                         </p>
                     </li>
                     <li>
-                        <p><%= image_tag 'top/osusume04.png' %></p>
+                        <p><%= image_tag 'top/osusume04.svg' %></p>
                         <p class="topic_text push_text">
                             ミーティングの時間を<br>
                             回数制限なしでとりたい！
@@ -318,23 +317,13 @@
         </section>
         <div class="topic_wrap button_wrap">
             <div class="button_background">
-                <p  class="button"><a href="contact/index.html">サイト制作を<span>相談・</span>依頼する  ＞</a></p>
+                <p  class="button"><%= link_to "サイト制作を相談・依頼する >", "forms" %></p>
             </div>
         </div>
         <section class="topic_wrap">
             <div class="topic_center">
-                <h2>Q&A</h2>
+                <h2 id="5">Q&A</h2>
                 <div class="cp_qa">
-                    <!-- <div class="cp_actab">
-                        <input id="cp_tabfour031" type="checkbox" name="tabs">
-                        <label for="cp_tabfour031">Q 個人に頼むってどうなの？？</label>
-                        <div class="cp_actab-content">
-                            <p>クオリティ面ではしっかり制作いたしますのでご安心ください。<br>
-                                信頼関係が第一と思いますので、打ち合わせ・ヒアリングのお時間はお客様が必要と思う回数を<br>
-                                ご提示いただき実施する流れになります。
-                            </p>
-                        </div>
-                    </div> -->
                     <div class="cp_actab">
                         <input id="cp_tabfour032" type="checkbox" name="tabs">
                         <label for="cp_tabfour032">Q １ヶ月以内など、最短で納品してほしいときはどうすればいい？</label>
@@ -345,13 +334,6 @@
                     <div class="cp_actab">
                         <input id="cp_tabfour033" type="checkbox" name="tabs">
                         <label for="cp_tabfour033">Q 一度顔を合わせてから依頼をしたいのですが可能ですか？</label>
-                        <div class="cp_actab-content">
-                        <p>答えテキスト</p>
-                        </div>
-                    </div>
-                    <div class="cp_actab">
-                        <input id="cp_tabfour034" type="checkbox" name="tabs">
-                        <label for="cp_tabfour034">Q ちゃんと作ってくれるか不安です。</label>
                         <div class="cp_actab-content">
                         <p>答えテキスト</p>
                         </div>
@@ -375,7 +357,7 @@
         </section>
     </div>
     <footer>
-      <p>答えテキスト</p>
+      <p>© 2020 Good view inc.</p>
     </footer>
   </body>
 </html>

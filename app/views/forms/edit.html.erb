@@ -1,0 +1,21 @@
+<div class="edit_wrap">
+<p class="page_name">forms#edit</p>
+<h1>「<%= @forms.name %>」
+    の内容を編集します。</h1>
+<%= form_for(@forms, url:{controller:'forms', 
+    action:'edit', id:@forms.id}) do |forms| %>
+      <div class="form-group">
+      <label for="name">名前</label>
+      <%= forms.text_field :name,{class:"form-control"} %>
+    </div>
+    <div class="form-group">
+      <label for="mail">メール</label>
+      <%= forms.text_field :mail,{class:"form-control"} %>
+    </div>
+    <div class="form-group">
+      <label for="content">内容</label>
+      <%= forms.text_field :content,{class:"form-control"} %>
+    </div>
+    <%= forms.submit "更新" ,{class:"edit_button"} %>
+  <% end %>
+</div>

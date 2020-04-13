@@ -1,0 +1,47 @@
+<div class="show_wrap">
+  <p class="page_name">Forms#show</p>
+  <h1>顧客データ</h1>
+  <table class="show_table">
+    <tr>
+      <th>ID</th>
+      <th>名前</th>
+      <th>メール</th>
+      <th>内容</th>
+      <th>メモ</th>
+      <th colspan="2"></th>
+    </tr>
+    <% @forms.each do |obj| %> 
+    <tr>
+        <td class="id_box">
+          <%= obj.id %>
+        </td>
+        <td  class="name_box">
+            <%= obj.name %>
+        </td>
+        <td  class="mail_box">
+          <%= obj.mail %>
+        </td>
+        <td  class="content_box">
+          <%= obj.content %>
+        </td>
+        <td class="edit_box">
+          <a href="/forms/edit/<%= obj.id %>">編集</a>
+        </td>
+        <td class="dalete_box">
+        　　<a href="javascript:delData(
+          　　<%= (obj.id.to_s + ",'".to_s + obj.name.to_s).html_safe %>');">削除
+          </a>
+        </td>
+        <% end %> 
+        </tr>
+
+  </table>
+</div>
+<script>
+function delData(id,title){
+  if (confirm('「' + title + '」のデータを削除しますか？')){
+    document.location = "/forms/delete/" + id;
+  }
+}
+</script>
+

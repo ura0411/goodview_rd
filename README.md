@@ -30,15 +30,17 @@ Things you may want to cover:
 
 * ▼新しく作るとき
 
-* rails generate model 作るもの title:text author:text price:integer publisher:text memo:text
+* rails generate model form title:text name:text meil:text content:text
 
 ↓マイグレーションで更新する
 
 * rails db:migrate
 
-↓viewに　index show add edit　の４つの.erbを作る。
+↓viewに　list show index edit　の４つの.erbを作る。
 
-* rails generate controller 作る名前 index show add edit
+* rails generate controller forms list show index edit
+
+* 
 
 
  networkでどう通っているか確認
