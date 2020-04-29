@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :accounts
   get 'forms', to: 'forms#index'
   post 'forms', to: 'forms#add'
 
@@ -17,6 +18,10 @@ Rails.application.routes.draw do
   patch  'forms/edit/:id', to: 'forms#edit'
   
   get 'top', to: 'top#index'
+
+  get 'top/index01', to: 'top#index01'
+
+  get 'top/index03', to: 'top#index03'
 
   root 'top#index'
 

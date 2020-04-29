@@ -1,4 +1,5 @@
 class FormsController < ApplicationController
+  before_action :authenticate_account!, only: [:show, :edit, :delete]
 
   def index
     @forms = Forms.new forms_params

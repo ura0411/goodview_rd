@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/top.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+    <title>ホームページ制作会社　GoodView 制作物</title>
+    <%= favicon_link_tag 'top/favicon.ico' %>
+</head>
+  <body  class="product">
+      <nav class="top_nav">
+          <%= image_tag 'top/logo.svg' %>
+          <ul>
+            <li><%= link_to "コンセプト", "#1" %></li>
+            <li><%= link_to "制作例", "#2" %></li>
+            <li><%= link_to "料金プラン", "#3" %></li>
+            <li><%= link_to "プロフィール", "#4" %></li>
+            <li><%= link_to "QA", "#5" %></li>
+            <li><%= link_to "お問い合わせ", "/forms" %></li>
+          </ul>
+    </nav>
+    <div class="kv_wrap kv_details">
+      <div class="cover">
+        <h1>Product</h1>
+      </div>
+    </div>
+    <p class="go_top"><%= link_to "< TOP", "/" %></p>
+    <div class="img_wrap">
+      <p class="img"><%= image_tag 'top/needle_hospital.jpg' %></p>
+    </div>
+    <footer>
+      <p>© 2020 Good view inc.</p>
+    </footer>
+  </body>
+</html>
